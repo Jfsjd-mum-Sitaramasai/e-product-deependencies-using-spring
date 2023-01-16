@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <bean id="twills_shirt" class="com.prod.ecommerce.Shirt"> 
+    <property name="brandName" value="Twills"></property>
+    <property name="price" value="2000"></property>
+    <property name="topPrice" value="20000"></property>
+    </bean>
+    <bean id="tommy_shirt" class="com.prod.ecommerce.Shirt"> 
+    <property name="brandName" value="TOMMYHILFIGRE"></property>
+    <property name="price" value="3000"></property>
+    <property name="topPrice" value="30000"></property>
+        
+    </bean>
+
+    <bean id="fastrack_watches" class="com.prod.ecommerce.Watches">
+    <constructor-arg name="name" value="FASTRACK"/>
+    <constructor-arg name="price" value="2,500"/>
+    <constructor-arg name="topPrice" value="6000"/>
+        
+    </bean>
+    <bean id="wrogn_watches" class="com.prod.ecommerce.Watches">
+    <constructor-arg name="name" value="WROGN" />
+    <constructor-arg name="price" value="1,500" />
+    <constructor-arg name="topPrice" value="4,500" />
+        
+    </bean>
+
+    <context:component-scan base-package="com.prod.*" />
+    <bean id="Real_me" class="com.prod.ecommerce.Mobile"> 
+    <property name="brandName" value="REALME"></property>
+    <property name="price" value="30000"></property>
+    <property name="topPrice" value="60000"></property>
+        
+    </bean>
+
+
+   
+
+</beans>
